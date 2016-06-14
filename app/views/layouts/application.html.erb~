@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	<%= render 'header' %>
+	<%= render 'layouts/header' %>
 
 	<main class="containerOFF">
 		<section id="banner">
@@ -25,12 +25,6 @@
 		<section>
 	</main>
 	
-	<footer>
-		<h4 id="footer-header">HOUSECALL NETWORK</h4>
-		<div id="footer-body" class="container">
-			<!--<p>HCN Central is a product of Housecall Network.</p>-->
-			<%#= link_to 'Take me to HCN CENTRAL', root_url(subdomain: 'central') %>
-		</div>
-	</footer>
+	<%= render 'layouts/footer' %>
 </body>
 </html>

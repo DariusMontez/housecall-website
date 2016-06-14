@@ -12,8 +12,10 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-	<%= render 'layouts/header' %>
+  
+  <% if @clean_header %>
+	  <%= render 'layouts/header' %>
+	<% end %>
 
 	<main class="containerOFF">
 		<section id="banner">

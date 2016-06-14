@@ -1,0 +1,26 @@
+<header class="clearfix">
+	<nav class="navbar navbar-default navbar-clean">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+				<a href="/" class="navbar-brand">Housecall</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+      		<li><% if signed_in? %>
+      			<%= link_to 'SIGN OUT', sign_out_path, class: '' %>
+      		<% else %>
+      		  <% if controller_name != 'sessions' -%>
+        			<%= link_to 'SIGN IN', sign_in_path, class: 'btn-navbar' %>
+      		  <% end -%>
+      		<% end %></li>
+      	</ul>
+			</div>
+		</div>
+	</nav>
+</header>

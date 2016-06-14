@@ -1,5 +1,7 @@
 class StaticpagesController < ApplicationController
 
-def index
+	def index
+	  @hide_header = true
+	end
 
 end

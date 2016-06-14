@@ -1,6 +1,6 @@
 <div class="hero-container">
   <div class="hero-image">
-	  <%= image_tag 'sql_bg.jpg' %>
+	  <%= image_tag 'banner.jpg' %>
   </div>
   <div class="hero-overlay">
 	  <div class="hero-text">

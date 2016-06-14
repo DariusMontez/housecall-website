@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+	<h1>Node <%= @node.id %></h1>
+	<table class="table">
+		<thead>
+		  <tr>
+		    <th>Mac address</th>
+		    <th>Location</th>
+		    <th>Date of Origin</th>
+		    <th colspan="1"></th>
+		  </tr>
+		</thead>
+
+		<tbody>
+	    <tr>
+	      <td><%= @node.mac_address %></td>
+	      <td><%#= link_to @node.location.city + ', ' + @node.location.country, @node.location %></td>
+	      <td><%= @node.created_at %>
+	      <!--<td><#%= link_to 'Edit', edit_node_path(node) %></td>-->
+	      <td><%= link_to 'Destroy', @node, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	    </tr>
+		</tbody>
+	</table>
+	
+	<h1>Patients using node <%= @node.id %></h1>
+	<table class="table">
+		<thead>
+    <tr>
+    	<th>#</th>
+      <th>Name</th>
+      <th>Priority</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @node.patients.each do |patient| %>
+      <tr>
+        <td><%= patient.id %></td>
+      	<td><%= link_to patient.name, patient %></td>
+        <td><%= patient.priority %></td>
+        <td><%= link_to 'Show', patient %></td>
+        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+	</table>
+</div>
+
+<!--<%= link_to 'Edit', edit_node_path(@node) %> |
+<%= link_to 'Back', nodes_path %>-->

@@ -1,0 +1,7 @@
+class HcncentralController < ApplicationController
+	
+	def index
+		
+	end
+
+end

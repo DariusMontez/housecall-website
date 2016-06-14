@@ -1,0 +1,26 @@
+<% content_for  :banner do %>
+  <%= render 'layouts/banner' %>
+<% end %>
+
+<div>
+  <center>
+    
+			
+			
+
+	  <div>
+	  <!--<%#= link_to sign_in_path do %>
+		  <button class="btn btn-default btn-lg">SIGN IN </button>
+	  <%# end %>-->
+	    <a href="#">What does it mean to be a doctor?</a>
+  </center>
+  
+  <hr>
+  
+  <section>
+    <hgroup class="section-heading">
+      <h1>Our Mission</h1>
+    </hgroup>
+    <p>The mission of Housecall Network is to bring world-class medical support to every community on the planet.
+  </section>
+<div>

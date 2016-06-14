@@ -1,0 +1,5 @@
+class AddAppointmentIdIndexToDataEntries < ActiveRecord::Migration
+  def change
+  	add_index :data_entries, :apppointment_id
+  end
+end

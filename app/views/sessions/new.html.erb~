@@ -1,0 +1,31 @@
+	<div class="signin-container">
+      
+        <%= stylesheet_link_tag    'sessions', media: 'all', 'data-turbolinks-track' => true %>
+      
+			<%= form_tag sessions_path, class: 'signin-form form-horizontal' do %>
+			
+				<h2>Sign In</h2>
+				
+				<div class="signin-fields ">
+				
+					<div class="field input-group form-group">
+					  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+						<%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Email' %>
+					</div>
+		
+					<div class="field input-group form-group">
+					  <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+						<%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Password' %>
+					</div>
+				
+				</div>
+		
+				<div class="actions">
+					<%= submit_tag 'SIGN IN', class: 'btn btn-primary form-control' %>
+				</div>
+				
+				<p>I still need to <%= link_to 'create my account', register_path %>
+		
+			<% end %>
+	
+	</div>

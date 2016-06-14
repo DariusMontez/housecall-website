@@ -1,0 +1,43 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.signin-header {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	background-color: #fff;
+	color: #fff;
+	
+	padding: 8px 0;
+	border-bottom: 3px solid #ccc;
+}
+
+.signin-container {
+	
+	text-align: center;
+	
+}
+
+.signin-form {
+	padding: 16px;
+//	background-color: #fff;
+}
+
+.signin-fields {
+		text-align: right;
+}
+
+/* Styles for moble devices */
+
+@media screen and (min-width: 50em) {
+  .signin-form {
+//  	border: 1px solid #ccc;
+		margin: 32px 0;
+		display: inline-block;
+//		background-color: #fff;
+    max-width: 50em;
+  }
+}
+
+

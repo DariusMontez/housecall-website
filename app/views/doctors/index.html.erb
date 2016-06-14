@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Doctor Index</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+    	<th>#</th>
+      <th>Name</th>
+      <th>Patients</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doctors.each do |doctor| %>
+      <tr>
+        <td><%= doctor.id %>
+        <td><%= link_to doctor.name, doctor %></td>
+        <td><%= doctor.patients.length %>
+        <td><%= link_to 'Show', doctor %></td>
+        <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+        <td><%= link_to 'Delete', doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Doctor', new_doctor_path %>

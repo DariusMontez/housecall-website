@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Node Index</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+    	<th>#</th>
+      <th>Mac address</th>
+      <th>Location</th>
+      <th>Date of Origin</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nodes.each do |node| %>
+      <tr>
+      	<td><%= node.id %></td>
+        <td><%= node.mac_address %></td>
+        <td><% if node.location -%>
+      		<%= node.location.city %> - <%= node.location.country %>
+    		<% else -%>
+    			None
+  			<% end -%></td>
+        <td><%= node.created_at %>
+        <td><%= link_to 'Show', node_path(node) %></td>
+        <td>
+        	<%= link_to 'Delete', node, method: :delete, data: { confirm: 'Are you sure?' } %>
+    		</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!--<#%= link_to 'New Node', n<br/>ew_node_path %>-->

@@ -1,0 +1,41 @@
+{
+	"profile": {
+		"id": "someID",
+		"name": "Joe Smith",
+		"birthdate": 1920,
+		"media_path": "/media/{profile_id}/{media_id}",
+		"images": [
+			{
+				"id": "someID", 
+				"name": {"EN_US": "someImageCaption"}
+			}
+		],
+		"archive" {
+			"apppointments": [
+				{
+					"id": "someID",
+					"dataEntries": [
+						{
+							"timestamp": "someTimestamp",
+							"classification": "SEN-HEARTRATE",
+							"value": "86",
+							"unit": "bpm"
+						},
+						{
+							"timestamp": "someTimestamp",
+							"classification": "SEN-BLOODPRESSURE",
+							"value": {"systolic": 117, "diastolic": 80},
+							"unit": "mmHg"
+						},
+						{
+							"timestamp": "someTimestamp",
+							"classification": "someClassification",
+							"value": "someValue",
+							"unit": "someUnit"
+						}
+					]
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap.min
+ *= require_tree .
+ *= require_self
+ */
+
+h1 {
+	font-size: 3em;
+	font-family: freemono;
+/*	font-weight: bold;*/
+}
+
+h2 {
+	font-family: arial;
+	color: #444;
+	font-size: 2.2;
+	font-weight: 100;	
+}
+
+body {
+	background: #f8f8f8;
+	color: #111;
+	font-size: 1.35em;
+}
+
+a {
+/*	color: #d64930;*/
+	color: #439324;
+}
+
+a:hover,
+a:visited {
+/*	color: #a03624;*/
+	color: #248016;
+	background: inherit;
+}
+ 
+.navbar {
+/*	background: #d64930;*/
+	background: black;
+	border-radius: 0px;
+}
+
+.navbar a {
+/*	color: #fff;*/
+	color: #49d630;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.navbar a:hover,
+.nav > li > a:hover,
+.nav > li > a:focus {
+	background: rgba(255,255,255,0.1);
+}
+
+.navbar .navbar-header  a.navbar-brand {
+	color: #fff;
+	font-weight: 700;
+	font-family: arial;
+	font-size: 1.36em;
+}
+
+.table > thead > tr > th {
+	border-color: #36a024;
+}
+
+.table tr[data-href] {
+	cursor: pointer;
+}
+
+footer {
+	margin-top: 72px;
+	border-top: 1px solid #d0d0d0;
+	padding-top: 0px;
+	padding-bottom: 48px;
+	background: inherit;
+}
+
+#footer-header {
+	background: #fff;
+	padding: 8px;
+	margin: 0;
+	color: #555;
+	padding: 8px 80px;
+	font-family: arial;
+}
+
+#footer-body {
+	padding-top: 8px;
+	color: #333;
+}

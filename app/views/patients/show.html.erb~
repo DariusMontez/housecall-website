@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @patient.name %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @patient.priority %>
+</p>
+
+<p>
+  <strong>Heartrate:</strong>
+  <%= @h_patient.data['name'] %>
+</p>
+
+<% @h_patient.data.each do |qual, val| %>
+	<p>
+		<strong><%= qual.gsub(/.*:/, '').capitalize %></strong>
+		<%= val %>
+	</p>
+<% end %>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

@@ -1,0 +1,34 @@
+<h1>Data Entry Index</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+    	<th>#</th>
+    	<th>Classification</th>
+    	<th>Value</th>
+    	<th>Unit</th>
+    	<th>Appointment</th>
+    	<th>Timestamp</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_entries.each do |data_entry| %>
+      <tr>
+      	<td><%= data_entry.id %></td>
+      	<td><%= data_entry.classification %></td>
+      	<td><%= data_entry.value %></td>
+      	<td><%= data_entry.unit %></td>
+      	<td><%= link_to 'Link', data_entry.appointment %></td>
+      	<td><%= data_entry.created_at %></td>
+        <td><%= link_to 'Edit', edit_data_entry_path(data_entry) %></td>
+        <td><%= link_to 'Destroy', data_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Data entry', new_data_entry_path %>

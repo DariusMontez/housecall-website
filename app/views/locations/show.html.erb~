@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+	<h1>Nodes in <%= @location.city %>, <%= @location.country %></h1>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>MAC Address</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @location.nodes.each do |node| %>
+			<tr>
+				<td><%= link_to node.id, node %></td>
+				<td><%= link_to node.mac_address, node %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

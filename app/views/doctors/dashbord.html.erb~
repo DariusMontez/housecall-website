@@ -1,0 +1,4 @@
+<div id="dashboard">
+	<p id="welcome">Welcome, @user</p>
+	<h1>Dashboard</h1>
+</div>

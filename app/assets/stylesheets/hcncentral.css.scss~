@@ -1,0 +1,29 @@
+// Place all the styles related to the hcncentral controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar {
+/*	background: #d64930;*/
+	background: black;
+	border-radius: 0px;
+}
+
+.navbar a {
+/*	color: #fff;*/
+	color: #49d630;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.navbar a:hover,
+.nav > li > a:hover,
+.nav > li > a:focus {
+	background: rgba(255,255,255,0.1);
+}
+
+.navbar .navbar-header  a.navbar-brand {
+	color: #fff;
+	font-weight: 700;
+	font-family: arial;
+	font-size: 1.36em;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Housecall Network</title>
+  
+  <meta charset="utf=8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+					<a href="/" class="navbar-brand">Housecall</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+        		<li><% if signed_in? %>
+        			<%= link_to 'SIGN OUT', sign_out_path, class: 'navbar-btn' %>
+        		<% else %>
+        		  <% if controller_name != 'sessions' -%>
+          			<%= link_to 'SIGN IN', sign_in_path, class: 'btn-navbar' %>
+        		  <% end -%>
+        		<% end %></li>
+        	</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main class="containerOFF">
+		<section id="banner">
+			<%= yield :banner %>
+		</section>
+		
+		<section id="page-content" class="container">
+			<%= yield %>
+		<section>
+	</main>
+	
+	<footer>
+		<h4 id="footer-header">HOUSECALL NETWORK</h4>
+		<div id="footer-body" class="container">
+			<!--<p>HCN Central is a product of Housecall Network.</p>-->
+			<%#= link_to 'Take me to HCN CENTRAL', root_url(subdomain: 'central') %>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,249 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap.min
+ * require_tree .
+ *= require_self
+ */
+ 
+// Green Theme 
+//$primary-accent: #30aa30;
+//$secondary-accent: #dd3030;
+
+// Blue theme
+$primary-accent: #3050ca;
+$secondary-accent: #dd3030;
+
+// Red theme
+//$primary-accent: #ca3030;
+//$secondary-accent: #dd3030;
+ 
+h1 {
+	font-size: 3em;
+	font-family: arial;
+	color: #222;
+/*	font-weight: bold;*/
+}
+
+h2 {
+	font-family: freemono;
+	color: #444;
+	font-size: 2.2;
+	font-weight: 100;	
+}
+
+body {
+	background: #f8f8f8;
+	color: #111;
+	font-size: 1.45em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+a {
+	color: $primary-accent;
+}
+
+a:hover,
+a:visited {
+	color: $primary-accent;
+	background: inherit;
+}
+
+.page-header {
+	background-color: #eee;
+	color: #000;
+	margin-top: 0;
+}
+
+.navbar {
+	background: #eee;
+	border-radius: 0px;
+	border-top: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	border-bottom: 3px solid #ccc;
+}
+
+.navbar a {
+	color: #30aa30;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.navbar a:hover,
+.nav > li > a:hover,
+.nav > li > a:focus {
+//	background: rgba(255,255,255,0.1);
+	background: rgba(0,0,0,0.1);
+}
+
+.navbar .navbar-header  a.navbar-brand {
+	color: #000;
+	font-weight: 700;
+	font-family: arial;
+	font-size: 1.36em;
+}
+
+.navbar .btn-navbar {
+	background-color: $primary-accent;
+	color: white !important;
+}
+.navbar .btn-navbar:hover {
+	background-color: darken($primary-accent, 10%) !important;
+	color: white;
+}
+
+#banner {
+//	background-color: #111;
+}
+
+.btn {
+  border-radius: 2px;
+  background-color: transparent;
+  color: #444;
+  border-color: #444;
+  border-width: 2px;
+}
+
+.btn-primary {
+//	background-color: $primary-accent;
+//	border-color: #107010;
+  color: $primary-accent;
+  border-color: $primary-accent;
+}
+.btn-primary:hover {
+	background-color: darken($primary-accent, 10%);
+  border-color: darken($primary-accent, 10%);
+}
+
+.input-group {
+  margin-bottom: 16px;
+}
+
+.table > thead > tr > th {
+	border-color: $primary-accent;
+}
+
+.table tr[data-href] {
+	cursor: pointer;
+}
+
+.section-heading {
+  text-align: center;
+}
+
+/* Hero Banner */
+
+.hero-container {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	
+	
+}
+.container .hero-container {
+  margin: -15px;
+}
+
+.hero-image {
+	width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+//	opacity: 0.23;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	background: url('sql_bg.jpg') no-repeat center top;
+/*	bottom: 0px;*/
+  z-index: -10;
+}
+
+.hero-image > img {
+	width: 100%;
+/*	max-height:100%;*/
+/*	margin: 0 auto;*/
+
+	
+	display: none;
+  max-width:1500px;
+  max-height:800px;
+  width: auto;
+  height: auto;
+/*	margin-top: -0%;*/
+/*	margin-left: -25%;*/
+/*	margin-right: -25%;*/
+}
+
+.hero-overlay {
+/*	background: rgba(0, 40, 3, 0.95);*/
+//	background: rgba(0,0,0,0.75);
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+	
+}
+
+.hero-text {
+	text-align: center;
+	color: white !important;
+	line-height: 1.25em;
+	padding: calc(24px + 6%) 16px;
+	font-size: 1.5em;
+	overflow:hidden;
+	
+/*	background: url('../media/IntegrityTurbines_banner.JPG') no-repeat center top;*/
+	
+}
+
+.hero-text h1 {
+	font-size: 2.5em;
+	font-weight: 500;
+	color: white;
+}
+
+.hero-text h2 {
+  color: white;
+}
+
+.hero-text .gc-cs-link {
+	color: white;
+}
+
+footer {
+	margin-top: 72px;
+	border-top: 1px solid #d0d0d0;
+	padding-top: 0px;
+	padding-bottom: 48px;
+	background: inherit;
+}
+
+#footer-header {
+	background: #fff;
+	padding: 8px;
+	margin: 0;
+	color: #555;
+	padding: 8px 80px;
+	font-family: arial;
+}
+
+#footer-body {
+	padding-top: 8px;
+	color: #333;
+}

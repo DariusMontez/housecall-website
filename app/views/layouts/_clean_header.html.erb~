@@ -1,4 +1,4 @@
-<header>
+<header class="clearfix" id="page-header">
 	<nav class="navbar navbar-default navbar-clean">
 		<div class="container-fluid">
 			<div class="navbar-header">

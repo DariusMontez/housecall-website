@@ -1,19 +1,8 @@
 <% content_for  :banner do %>
-  <%= render 'layouts/banner_text' %>
+  <%= render 'layouts/banner' %>
 <% end %>
 
 <div>
-  <center>
-    
-			
-			
-
-	  <div>
-	  <!--<%#= link_to sign_in_path do %>
-		  <button class="btn btn-default btn-lg">SIGN IN </button>
-	  <%# end %>-->
-	    <a href="#">What does it mean to be a doctor?</a>
-  </center>
   
   <hr>
   

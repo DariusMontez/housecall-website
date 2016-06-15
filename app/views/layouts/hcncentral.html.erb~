@@ -17,7 +17,7 @@
 		<nav class="navbar ">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a href="/" class="navbar-brand">HCN CENTRAL</a>
+					<%= link_to 'HCN CENTRAL', root_url(subdomain: 'central'), class: 'navbar-brand' %>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
@@ -27,11 +27,6 @@
         		<li><a href="<%= nodes_path %>">Nodes</a></li>
         		<li><a href="<%= appointments_path %>">Appointments</a></li>
         		<li><a href="<%= data_entries_path %>">Data</a></li>
-        		<% if signed_in? %>
-        			<li><%= link_to 'Sign out', sign_out_path %></li>
-        		<% else %>
-        			<li><%= link_to 'Sign in', sign_in_path %></li>
-        		<% end %>
         	</ul>
 				</div>
 			</div>

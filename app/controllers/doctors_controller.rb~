@@ -17,6 +17,7 @@ class DoctorsController < ApplicationController
   # GET /doctors/new
   def new
     @doctor = Doctor.new
+    layout 'application'
   end
 
   # GET /doctors/1/edit
@@ -71,7 +72,7 @@ class DoctorsController < ApplicationController
   end
   
   def profile
-  	render "profile", layout 'application'
+  	render "profile", layout: 'application'
   end
 
   private

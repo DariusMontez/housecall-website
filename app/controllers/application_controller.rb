@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
 	end
 	
 	def root
-		if request.subdomain == 'hcncentral'
+		if request.subdomain == 'central'
 			redirect_to controller: 'hcncentral', action: 'index'
 		else
 			if signed_in?

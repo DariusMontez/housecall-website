@@ -17,6 +17,7 @@ class DoctorsController < ApplicationController
   # GET /doctors/new
   def new
     @doctor = Doctor.new
+    render 'new', layout: 'application'
   end
 
   # GET /doctors/1/edit

@@ -9,10 +9,10 @@ Rails.application.routes.draw do
 		resources :patients
 		resources :nodes
 		resources :locations
-	  resources :doctors
+	  resources :doctors, :except => [:new] 
   	resources :appointments
   	
-  	post 'patients/:id/record' => 'patients#update_hpatient'
+  	post 'patients/:id/records' => 'patients#update_hpatient'
 	end
 	
 	constraints subdomain: '' do

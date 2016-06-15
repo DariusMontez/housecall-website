@@ -19,7 +19,7 @@
 
 			<tbody>
 				<% @appointments.each do |appointment| %>
-				  <% if !appointment.doctor.nil? %>
+				  <% if appointment.doctor == current_user %>
 				    <tr>
 				      <td><%= appointment.created_at %></td>
 				      <% if appointment.patient.nil? -%>

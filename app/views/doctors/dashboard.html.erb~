@@ -1,5 +1,4 @@
 <div id="dashboard">
-	<p id="welcome">Welcome, <%= current_user.name %></p>
 	
 	<h1>DASHBOARD</h1>
 

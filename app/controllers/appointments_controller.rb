@@ -75,10 +75,10 @@ class AppointmentsController < ApplicationController
   	@appointment.doctor = @doctor
   	@appointment.save
   	
-  	if request.subdomain == ''
-  	  render 'show', layout: 'application'
-  	else
+  	if request.subdomain == 'central'
   	  render 'show'
+  	else
+  	  render 'show', layout: 'application'
   	end
   end
 

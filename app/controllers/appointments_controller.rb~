@@ -73,6 +73,7 @@ class AppointmentsController < ApplicationController
   	params.permit(:doctor_id)
   	@doctor = Doctor.find(params[:doctor_id])
   	@appointment.doctor = @doctor
+  	@appointment.save
   	
   	if request.subdomain == ''
   	  render 'show', layout: 'application'

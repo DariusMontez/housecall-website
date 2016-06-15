@@ -1,6 +1,6 @@
 class AppointmentsController < ApplicationController
   layout 'hcncentral'
-  before_action :set_appointment, only: [:show, :edit, :update, :destroy]
+  before_action :set_appointment, only: [:show, :edit, :update, :destroy, :accept]
 
   # GET /appointments
   # GET /appointments.json
@@ -73,6 +73,13 @@ class AppointmentsController < ApplicationController
   	params.permit(:doctor_id)
   	@doctor = Doctor.find(params[:doctor_id])
   	@appointment.doctor = @doctor
+  	@appointment.save
+  	
+  	if request.subdomain == 'central'
+  	  render 'show'
+  	else
+  	  render 'show', layout: 'application'
+  	end
   end
 
   private

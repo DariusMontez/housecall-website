@@ -1,12 +1,41 @@
 <div id="dashboard">
-	<p id="welcome">Welcome, <%= current_user.name %></p>
 	
-	<h3>DASHBOARD</h3>
+	<h1>DASHBOARD</h1>
+
+	<p id="welcome">Welcome, <%= current_user.name %></p>
 
 	<hr>
 	
-	<h2>Recent Appointments</h2>
 	<div id="appointments">
+	  <h2>Accepted Appointments</h2>
+	  <table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Date</th>
+				  <th>Patient</th>
+				  <th colspan="2"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @appointments.each do |appointment| %>
+				  <% if !appointment.doctor.nil? %>
+				    <tr>
+				      <td><%= appointment.created_at %></td>
+				      <% if appointment.patient.nil? -%>
+				    	<td>None</td>
+				      <% else -%>
+				      <td><%= appointment.patient.name %></td>
+				      <% end -%>
+				      <td><%= link_to "Show", appointment %></td>
+				      <!--<td><%#= link_to 'Delete', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+				    </tr>
+				  <% end %>
+				<% end %>
+			</tbody>
+		</table>
+	  
+	  <h2>Recent Appointments</h2>
 		<table class="table table-hover">
 			<thead>
 				<tr>
@@ -18,17 +47,19 @@
 
 			<tbody>
 				<% @appointments.each do |appointment| %>
-				  <tr>
-				    <td><%= appointment.created_at %></td>
-				    <% if appointment.patient.nil? -%>
-				  	<td>None</td>
-				    <% else -%>
-				    <td><%= appointment.patient.name %></td>
-				    <% end -%>
-				    <td><%= link_to "Accept", accept_appointment_path(appointment) %></td>
-				    <td><%= link_to "Show", appointment %></td>
-				    <!--<td><%#= link_to 'Delete', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-				  </tr>
+				  <% if appointment.doctor.nil? %>
+				    <tr>
+				      <td><%= appointment.created_at %></td>
+				      <% if appointment.patient.nil? -%>
+				    	<td>None</td>
+				      <% else -%>
+				      <td><%= appointment.patient.name %></td>
+				      <% end -%>
+				      <td><%= link_to "Accept", accept_appointment_path(appointment, params: {'doctor_id' => current_user}) %></td>
+				      <td><%= link_to "Show", appointment %></td>
+				      <!--<td><%#= link_to 'Delete', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+				    </tr>
+				  <% end %>
 				<% end %>
 			</tbody>
 		</table>

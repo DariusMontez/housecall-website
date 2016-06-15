@@ -31,8 +31,15 @@ class DoctorsController < ApplicationController
 
     respond_to do |format|
       if @doctor.save
-        format.html { redirect_to @doctor, notice: 'Doctor was successfully created.' }
-        format.json { render :show, status: :created, location: @doctor }
+        if request.subdomain == 'central'
+          format.html { redirect_to @doctor, notice: 'Doctor was successfully created.' }
+          format.json { render :show, status: :created, location: @doctor }
+        else
+          sign_in(@doctor)
+          format.html { redirect_to dashboard_path(@doctor), notice: 'Doctor was successfully created.' }
+          format.json { render :dashboard, status: :created, location:  dashboard_path(@doctor) }
+        end
+        
       else
         format.html { render :new }
         format.json { render json: @doctor.errors, status: :unprocessable_entity }

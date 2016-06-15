@@ -3,6 +3,7 @@
 	<div id="footer-body" class="container">
 		<!--<p>HCN Central is a product of Housecall Network.</p>-->
 		<%#= link_to 'Take me to HCN CENTRAL', root_url(subdomain: 'central') %>
+<<<<<<< HEAD
 		<div class="row">
 		  <div class="footer-img col-md-2">
 		    <%= image_tag 'logo.png' %>
@@ -11,7 +12,8 @@
 		    <h4>About Us</h4>
 		    <ol>
 		      <li><%= link_to "Our mission", mission_path %></li>
-		      <li><%= link_to "How can I help?", mission_path %></li>
+		      <li><%= link_to "How can I help?", '#' %></li>
+		      <li><%= link_to "World Map", '#' %></li>
 		    </ol>
 		  </div>
 		</div>
@@ -35,4 +37,13 @@
 		  </ul>
 		</div>
 	</div>
+=======
+	  <!--<div>
+		  <hgroup class="section-heading">
+        <h4><b>Our Mission</b></h4>
+      </hgroup>
+      <p>The mission of Housecall Network is to bring world-class medical support to every community on the planet.</p>
+    </div>-->
+	<div>
+>>>>>>> 5328f1d9e9eff7dd631a38ce89d662c5492b7924
 </footer>

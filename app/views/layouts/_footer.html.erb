@@ -3,5 +3,37 @@
 	<div id="footer-body" class="container">
 		<!--<p>HCN Central is a product of Housecall Network.</p>-->
 		<%#= link_to 'Take me to HCN CENTRAL', root_url(subdomain: 'central') %>
-	
+		<div class="row">
+		  <div class="footer-img col-md-2">
+		    <%= image_tag 'logo.png' %>
+		  </div>
+		  <div class="footer-category col-md-10">
+		    <h4>About Us</h4>
+		    <ol>
+		      <li><%= link_to "Our mission", mission_path %></li>
+		      <li><%= link_to "How can I help?", '#' %></li>
+		      <li><%= link_to "World Map", '#' %></li>
+		    </ol>
+		  </div>
+		</div>
+		
+		<div class="row">
+		  <h4>Where we're at:</h4>
+		  <ul class="country-list">
+		    <li>South Africa</li>
+		    <li>Ghana</li>
+		    <li>Mexico</li>
+		    <li>Brazil</li>
+		    <li>Croatia</li>
+		    <li>Georgia</li>
+		    <li>Peru</li>
+		    <li>Sudan</li>
+		    <li>Ethiopia</li>
+		    <li>Egypt</li>
+		    <% countries.each do |country| %>
+		      <li><%= country %></li>
+		    <% end %>
+		  </ul>
+		</div>
+	</div>
 </footer>

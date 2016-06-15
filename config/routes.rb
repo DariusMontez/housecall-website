@@ -28,7 +28,8 @@ Rails.application.routes.draw do
 	end
 	
 	get 'appointments/:id/accept' => 'appointments#accept', as: 'accept_appointment'
-
+  
+  get 'mission' => 'staticpages#mission', as: 'mission'
 	root 'application#root'
 
 end

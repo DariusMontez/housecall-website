@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   after_filter :set_csrf_token
   
-  helper_method :current_user, :signed_in?
+  helper_method :current_user, :signed_in?, :countries
   
   def set_csrf_token
   	if protect_against_forgery?
@@ -51,6 +51,10 @@ class ApplicationController < ActionController::Base
 			end
 		end
 	
+	end
+	
+	def countries
+	  @countries = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rhoncus et elit et consectetur. Sed rhoncus congue ante, vel sollicitudin nisi bibendum vitae. Aenean molestie lorem in suscipit tincidunt. Phasellus sed vulputate dui. Ut ornare nisl lacus, quis interdum dolor imperdiet sed. In hac habitasse platea dictumst. Mauris quis nulla consectetur, imperdiet justo quis, gravida ex. Nulla ut tortor tempor, efficitur tortor eu, iaculis dolor. Nam et consequat velit, nec porta ante. Pellentesque habitant morbi tristique senectus et netus et.".gsub(/,|\./, '').split("\s").map {|i| i.capitalize}
 	end
 	
 end

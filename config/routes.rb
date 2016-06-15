@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 	constraints subdomain: '' do
 		resources :sessions
   	resources :appointments
+  	resources :doctors, :only => [:create]
 		get 'sign_out' => 'sessions#destroy', as: 'sign_out'
 		get 'sign_in' => 'sessions#new', as: 'sign_in'
 		get 'register' => 'doctors#new', as: 'register'

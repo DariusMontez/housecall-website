@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 		resources :patients
 		resources :nodes
 		resources :locations
-	  resources :doctors, :except => [:new] 
+	  resources :doctors
   	resources :appointments
   	
   	post 'patients/:id/records' => 'patients#update_hpatient'

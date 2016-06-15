@@ -1,5 +1,5 @@
 <div class="hero-container">
-  <div class="hero-image">
+  <div class="hero-image greyscaleOFF">
 	  <%#= image_tag 'banner.jpg' %>
   </div>
   <div class="hero-overlay">
@@ -12,7 +12,7 @@
 		  <%= link_to register_path do %>
         <button class="btn btn-primary btn-lg">JOIN THE NETWORK OF DOCTORS</button>
       <% end %>
-      <h3><a href="#">What does it mean to be a doctor?</a></h3>
+      <!--<h3><a href="#">What does it mean to be a doctor?</a></h3>-->
 	  </div>
   </div>
 </div>

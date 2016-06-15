@@ -1,4 +1,4 @@
-<header class="clearfix" id="page-header">
+<header class="page-header-glass clearfix">
 	<nav class="navbar navbar-default navbar-clean">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -15,7 +15,7 @@
       		<li><% if signed_in? %>
       			<%= link_to 'SIGN OUT', sign_out_path, class: '' %>
       		<% else %>
-      		  <% if controller_name != 'sessions' -%>
+      		  <% if  !current_page?(register_path) -%>
         			<%= link_to 'SIGN IN', sign_in_path, class: 'btn-navbar' %>
       		  <% end -%>
       		<% end %></li>

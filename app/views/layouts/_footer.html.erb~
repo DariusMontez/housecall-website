@@ -1,0 +1,12 @@
+<footer>
+	<h4 id="footer-header">HOUSECALL NETWORK</h4>
+	<div id="footer-body" class="container">
+		<!--<p>HCN Central is a product of Housecall Network.</p>-->
+		<%#= link_to 'Take me to HCN CENTRAL', root_url(subdomain: 'central') %>
+	<div>
+	  <hgroup class="section-heading">
+      <h1>Our Mission</h1>
+    </hgroup>
+    <p>The mission of Housecall Network is to bring world-class medical support to every community on the planet.</p>
+  </div>
+</footer>
